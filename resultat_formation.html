@@ -22,6 +22,7 @@
 	
 	<div id="apps-header" data-theme="b" data-role="header" data-position="fixed"> <a id="btn-home" data-role="button" data-transition="slideup" href="#index" data-icon="home" data-iconpos="right" class="ui-btn-right"> Accueil </a> <a id="btn-back" data-role="button" data-rel="back" data-transition="slide" href="#page1" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left"> Retour </a> <h1> Resultat  </h1>  </div>
 	<div role="main" class="ui-content" data-scroll="true">
+   <div align="center" id="loadgif"><img src="images/ajax-loader.gif"></div>
     	<table data-role="table" id="resultats" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe ui-responsive" data-column-btn-theme="b" data-column-btn-text="Colonne à afficher" data-column-popup-theme="a">
          <thead>
            <tr class="ui-bar-d">
@@ -37,6 +38,7 @@
 		   
          </tbody>
        </table>
+       
 	   <div id="pagination" align="center"> <div class="ui-nodisc-icon"><!-- Class added to the wrapper -->
     <a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-notext ui-btn-b ui-btn-inline">Delete</a>
     <a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-notext ui-btn-b ui-btn-inline">Plus</a>
@@ -45,7 +47,7 @@
 
 	</div>
 <br><br>
-	<div data-role="footer"></div>
+	<div data-role="footer" data-position="fixed"></div>
 </div>
 </body>
 </html>

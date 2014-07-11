@@ -4,22 +4,13 @@
 
 
 // Respond to back/forward navigation
-$(window).load(function() {
-	$('.flexslider').flexslider({
-    animation: "slide"
-  });
-  $("#rechercher_formation").click(function() {  
-	 alert('1');
-});
- $("[data-role='footer']").html('© Copyright 2013 AUF - CUF / Tel : 02585522200');
-  
-});
+
 $(function() {
   // Handler for .ready() called.
   $("[data-role='footer']").html('© Copyright 2013 AUF - CUF / Tel : 02585522200');
   $("#test").html('Dieu nous aime');
   $("#rechercher_formation").click(function() {  
-	 alert('1');
+	 envoie_formulaire();
 	});
 	
   });
@@ -34,6 +25,7 @@ function envoie_formulaire(){
     }
 	url = "https://cartographie.auf.org/etablissement/api/?etablissement__region__nom=Asie-Pacifique&"+ url1;
     url += "&format=jsonp";
+	
 	var test = 'Romaric est le fils du Dieu tout puissant';
 	//alert(url);
 	ajax = $.ajax({
@@ -42,7 +34,7 @@ function envoie_formulaire(){
 		url: url,
 		crossDomain: true,
 		success: function (responseData, textStatus, jqXHR) {
-				
+			$('#loadgif').hide();
 				
 				//charger_pagination(url1,responseData.count,responseData.next,responseData.previous)
 				tableau = '';
@@ -71,6 +63,7 @@ function envoie_formulaire(){
  				
 				$('#pagination').html(prec+suiv);
 				$('#titre').html('titre');
+				
 				
 				
 		},

@@ -5,18 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, height=device-height">
 <title>Document sans titre</title>
 <link rel="stylesheet" type="text/css" href="jquerymobile/jquery.mobile-1.4.2.min.css">
+
 <link rel="stylesheet" type="text/css" href="css2/mobilestyle.css">
-<link rel="stylesheet" type="text/css" href="css2/flexslider.css">
+<link rel="stylesheet" type="text/css" href="jquerymobile/jquery.mobile.theme-1.4.2.min.css">
 <script src="jquery/jquery-1.8.0.min.js"></script>
 
 <script src="jquerymobile/jquery.mobile-1.4.2.min.js"></script>
-<script src="js/jquery.flexslider-min.js"></script>
 <script src="js/function.js"></script>
 <script language="javascript">
 $.mobile.page.prototype.options.addBackBtn = "True";
 $.mobile.page.prototype.options.backBtnText = "Retour";
-$.mobile.transitionFallbacks.slideout = "slide"
-$.mobile.defaultPageTransition ="slide"
+//$.mobile.transitionFallbacks.slideout = "slide"
+//$.mobile.defaultPageTransition ="slide"
 
 
 </script>
@@ -25,10 +25,9 @@ $.mobile.defaultPageTransition ="slide"
 
 <body>
 
-
 <section data-role="page" id="index" data-rel="back"  >
 	
-	<div data-role="header" data-theme="b"><h2>Service communautaire Francophone </h2></div>
+	<div data-role="header" data-theme="b"><a id="btn-menu" data-role="button" data-transition="" href="#menuleft" data-icon="grid" data-iconpos="left" class="ui-btn-left">  </a><h2>Service communautaire Francophone </h2></div>
 	<div role="main" class="ui-content" >
 		<!-- Place somewhere in the <body> of your page -->
 
@@ -42,13 +41,25 @@ $.mobile.defaultPageTransition ="slide"
 	<a href="formation.html" class="ui-btn ui-corner-all" style="background-color:#5d0e72;color:black;">Formation</a> 
 	
 	<a href="savoir.html" class="ui-btn ui-corner-all" style="background-color:#ef2929;color:black;">Savoir en partage</a> 
+    <a href="savoirpage.html" class="ui-btn ui-corner-all" style="background-color:#ef2929;color:black;">Savoir en partage</a> 
    </div>
             
 		
     </div>
-	<br><br><br><br><br><br><br><br><br><br><br><br>
-	<div data-role="footer" data-theme="b"></div>
+	
+	<div data-role="footer" data-theme="b" data-position="fixed"></div>
 
+<div data-role="panel" id="menuleft" data-position="left" data-display="overlay" data-theme="a" >
+    <div class="main">
+   <a href="#presentation" class="ui-btn ui-corner-all " style="background-color:#017EA1; color:black;" >Présentation</a>
+	<a href="#veille" class="ui-btn ui-corner-all" style="background-color:#F89236;color:black;">Veille</a>  
+	<a href="#campus" class="ui-btn ui-corner-all" style="background-color:#7bb43b;color:black;">Campus service</a> 	
+	<a href="formation.html" class="ui-btn ui-corner-all" style="background-color:#5d0e72;color:black;">Formation</a> 
+	
+	<a href="savoir.html" class="ui-btn ui-corner-all" style="background-color:#ef2929;color:black;">Savoir en partage</a> 
+    
+   </div>
+</div>
 </section>
 <div data-role="page" id="veille" data-add-back-btn="true" data-rel="back" >
 	
@@ -128,7 +139,7 @@ $.mobile.defaultPageTransition ="slide"
 </div>
         
     </div>
-	<div data-role="footer" data-theme="b"></div>
+	<div data-role="footer" data-theme="b" data-position="fixed"></div>
 
 </div>
 <section data-role="page" id="presentation" data-rel="back"  data-add-back-btn="true">
@@ -141,7 +152,7 @@ Organisé pour la communauté universitaire francophone, ce site accueille tous 
 <br>Vous trouverez sur ce site :
 		
     </div>
-	<div data-role="footer" data-theme="b"></div>
+	<div data-role="footer" data-theme="b" data-position="fixed"></div>
 
 </section>
 
@@ -152,7 +163,7 @@ Organisé pour la communauté universitaire francophone, ce site accueille tous 
     	Formation 
         
     </div>
-	<div data-role="footer" data-theme="b"></div>
+	<div data-role="footer" data-theme="b" data-position="fixed"></div>
 
 </div>
 <div data-role="page" data-add-back-btn="true" data-rel="back" id="campus" >
@@ -274,7 +285,7 @@ Tél. (678) 24 264<br>
 </div>
 
 	</div>
-	<div data-role="footer" data-theme="b"></div>
+	<div data-role="footer" data-theme="b" data-position="fixed"></div>
 
 </div>
 
